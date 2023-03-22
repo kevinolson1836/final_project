@@ -16,7 +16,7 @@ function setup() {
   var myCanvas = createCanvas(512,512);
   myCanvas.parent(parentDiv);
   background(200);
-
+dddd
   // clear screen
   clearbtn = createButton('Clear');
   clearbtn.parent(parentDiv);
