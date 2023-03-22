@@ -1,0 +1,15 @@
+logon 
+log off
+save img
+remove image 
+view all images on site
+
+
+log in page???
+    with log off 
+
+main drawing page
+
+uploaded imgaes page
+    can also view other images zsw
+
