@@ -13,9 +13,13 @@ let parentDiv = "drawDiv";
 
 function setup() {
   
-  var myCanvas = createCanvas(512,512);
+  var canvasDiv = document.getElementById('drawDiv');
+  var width = canvasDiv.offsetWidth;
+
+  var myCanvas = createCanvas(width,512);
   myCanvas.parent(parentDiv);
   background(200);
+<<<<<<< Updated upstream
 
   // clear screen
   clearbtn = createButton('Clear');
@@ -121,6 +125,8 @@ function setup() {
     clearAllColor();
     changeColor(strokeWhite);
   })
+=======
+>>>>>>> Stashed changes
 
 }
 
@@ -131,14 +137,26 @@ function draw() {
    }
 }
 
-function clearAllColor(){
-  strokeBlue.style('background-color', offColor);
-  strokeRed.style('background-color', offColor);
-  strokeGreen.style('background-color', offColor);
-  strokeBlack.style('background-color', offColor);
-	strokeWhite.style('background-color', offColor);
+
+function increaseSize(){
+  strokeSize +=1;
 }
 
-function changeColor(element){
-	element.style('background-color', onColor);
+function decreaseSize(){
+  strokeSize -=1;
+  if(strokeSize <= 0){
+     strokeSize = 1;      
+     }
+}
+
+
+function clearDrawing (){
+  background(200);
+}
+
+function changeColor(){
+  let colorInput = document.querySelector('#color');
+  let hexInput = document.querySelector('#hex');
+  let color = colorInput.value;
+  stroke(color);
 }

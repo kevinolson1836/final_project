@@ -1,9 +1,35 @@
 .container{
-    width: 35%;  /* roughly center */ 
-    height: 100%;
     text-align: center;
     margin: auto;
+    position: relative;
 }
+
+.drawDiv{
+    height: 512px;
+    width: 512px;
+    text-align: center;
+    padding-left: 25%;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 body{
     background-color: #575656;
@@ -61,7 +87,6 @@ li a:hover:not(.active) {
 
 
 button {
-    width: 40%; 
     font-size: 30px;
     border-radius: 12px;
     background-color: #dae2df;

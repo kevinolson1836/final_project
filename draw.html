@@ -26,10 +26,32 @@
     <!-- end nav bar -->
  
     <!-- start of drawing section -->
-    <div class="container">
-        <div id="drawDiv" style="height: 512px; width: 512px; text-align: center;">
-            <h1>Draw on me!</h1>
+    <div class="container row">
+      <!-- <button id="increaseSize" type="button">increaseSize</button> -->
+
+        <div id="col1" class="column" style="background-color: aqua;">
+          <button id="increaseSize" type="button" onclick="increaseSize()">increase size</button>
+          <button id="decreaseSize" type="button" onclick="decreaseSize()">decrease size</button>
         </div>
+
+        <div class="column" style="background-color: green;">
+          <div id="drawDiv">
+              <h1>Draw on me!</h1>
+          </div>
+
+          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+
+
+        </div>
+
+        <div id="col3" class="column" style="background-color: pink;" onclick="changeColor();">
+          <!-- <button type="button" onclick="changeColor();">color wheel</button> -->
+          <div style="text-align: center">
+            <input type="text" id="hex">
+            <input type="color" id="color">
+          </div>
+        </div>
+
       </div>
       <!-- end of drawing section -->
   
