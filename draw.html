@@ -1,10 +1,3 @@
-<!-- i was inspired by codingtrain on youtube so i built something similar to what he did in the video: 
-    https://www.youtube.com/watch?v=3MqJzMvHE3E&t=1840s
-
-    I wrote the code my self, I used the getting started code from the p5.js getting started
-    page and changed it for my needs.
--->
-
 <html>
   <head>
     <!-- p5.js CDN -->
@@ -26,19 +19,36 @@
     <!-- end nav bar -->
  
     <!-- start of drawing section -->
-    <div class="container">
-        <div id="drawDiv" style="height: 512px; width: 512px; text-align: center;">
-            <h1>Draw on me!</h1>
+    <div class="container row">
+      <!-- <button id="increaseSize" type="button">increaseSize</button> -->
+
+        <div id="col1" class="column" style="background-color: aqua;">
+          <button id="increaseSize" type="button" onclick="increaseSize()">increase size</button>
+          <button id="decreaseSize" type="button" onclick="decreaseSize()">decrease size</button>
         </div>
+
+        <div class="column" style="background-color: green;">
+          <div id="drawDiv">
+              <h1>Draw on me!</h1>
+          </div>
+
+          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+
+
+        </div>
+
+        <div id="col3" class="column" style="background-color: pink;" onclick="changeColor();">
+          <!-- <button type="button" onclick="changeColor();">color wheel</button> -->
+          <div style="text-align: center">
+            <input type="text" id="hex">
+            <input type="color" id="color">
+          </div>
+        </div>
+
       </div>
       <!-- end of drawing section -->
-  </body>
-  <body>
-    <div style="text-align: center">
-        <input type="text" id="hex">
-        <input type="color" id="color">
-      </div>
+  
 
-      <script src="sketch.js"></script>
+
   </body>
 </html>
