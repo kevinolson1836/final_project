@@ -114,3 +114,12 @@ button {
     margin: 5px;
 }
     
+
+#color{
+    background-image: radial-gradient(circle at center, red 40px, transparent 5px);  
+    background-repeat: no-repeat;
+    background-size: 20px 100%; /* equal to the height */
+    height: 200px;
+    width: 200px;
+    padding-left: 20px; /* equal to background-size in X-axis */
+}
