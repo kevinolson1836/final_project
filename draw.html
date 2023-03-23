@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./styles/style.css">
   </head>
 
-  <body >
+  <body onload="addEventListen()">
      <!-- start nav bar -->
      <ul class="">
       <li><a href="index.html">Home</a></li>
@@ -30,6 +30,25 @@
         <div id="drawDiv" style="height: 512px; width: 512px; text-align: center;">
             <h1>Draw on me!</h1>
         </div>
+<<<<<<< Updated upstream
+=======
+
+        <div class="column" style="background-color: green;">
+          <div id="drawDiv">
+              <h1>Draw on me!</h1>
+          </div>
+
+          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+        </div>
+
+        <div id="col3" class="column" style="background-color: pink;" oninput="changeColor();">
+          <!-- <button type="button" onclick="changeColor();">color wheel</button> -->
+          <div style="text-align: center">
+            <input type="color" id="color">
+          </div>
+        </div>
+
+>>>>>>> Stashed changes
       </div>
       <!-- end of drawing section -->
   

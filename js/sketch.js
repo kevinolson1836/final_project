@@ -1,8 +1,5 @@
 let clearbtn;
-let strokeBlue;
-let strokeRed;
-let strokeGreen;
-let strokeBlack;
+
 
 let strokeSize = 10;
 
@@ -141,4 +138,39 @@ function clearAllColor(){
 
 function changeColor(element){
 	element.style('background-color', onColor);
+<<<<<<< Updated upstream
+=======
+}
+
+function increaseSize(){
+  strokeSize +=1;
+}
+
+function decreaseSize(){
+  strokeSize -=1;
+  if(strokeSize <= 0){
+     strokeSize = 1;      
+     }
+}
+
+
+function clearDrawing (){
+  background(200);
+}
+
+function changeColor(){
+  let colorInput = document.querySelector('#color');
+  let hexInput = document.querySelector('#hex');
+  let color = colorInput.value;
+  console.log(color);
+  stroke(color);
+
+}
+
+
+
+function addEventListen(){
+
+  document.getElementById("color").addEventListener("click", changeColor);
+>>>>>>> Stashed changes
 }
