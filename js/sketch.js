@@ -1,9 +1,4 @@
 let clearbtn;
-let strokeBlue;
-let strokeRed;
-let strokeGreen;
-let strokeBlack;
-
 let strokeSize = 10;
 
 let onColor = '#abafae';
@@ -60,7 +55,6 @@ function clearDrawing (){
 
 function changeColor(){
   let colorInput = document.querySelector('#color');
-  let hexInput = document.querySelector('#hex');
   let color = colorInput.value;
   console.log(color);
   stroke(color);

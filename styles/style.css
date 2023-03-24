@@ -32,11 +32,17 @@
 
 
 body{
-    background-color: #575656;
+    background-color: #6b6a6a;
 }
 
 h1{
-    color: #e0dddd;
+    color: #e0dddd;   
+}
+p{
+    color:#04AA6D;
+    padding: 0px 0px 0px 50%;
+    background-color: white;
+    border: none;
 }
 
 ul {
@@ -44,7 +50,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #424141;
 }
 
 * {
@@ -56,7 +62,7 @@ ul {
     float: left;
     width: 33.33%;
     /* padding: 10px; */
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 800px; /* Should be removed. Only for demonstration */
   }
   
   /* Clear floats after the columns */
@@ -103,7 +109,10 @@ li a:hover:not(.active) {
     border: none;
     
 } 
-
+input {
+    border: none;
+    background-color: transparent;
+ }
 
 
 button {
@@ -113,13 +122,10 @@ button {
     padding: 10px;
     margin: 5px;
 }
-    
-
 #color{
-    background-image: radial-gradient(circle at center, red 40px, transparent 5px);  
-    background-repeat: no-repeat;
-    background-size: 20px 100%; /* equal to the height */
-    height: 200px;
-    width: 200px;
-    padding-left: 20px; /* equal to background-size in X-axis */
-}
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+        
+      }
+

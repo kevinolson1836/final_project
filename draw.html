@@ -1,10 +1,3 @@
-<!-- i was inspired by codingtrain on youtube so i built something similar to what he did in the video: 
-    https://www.youtube.com/watch?v=3MqJzMvHE3E&t=1840s
-
-    I wrote the code my self, I used the getting started code from the p5.js getting started
-    page and changed it for my needs.
--->
-
 <html>
   <head>
     <!-- p5.js CDN -->
@@ -22,6 +15,7 @@
      <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
+      <li><a href="animation.html">Upload</a></li>
     </ul>
     <!-- end nav bar -->
  
@@ -30,8 +24,14 @@
       <!-- <button id="increaseSize" type="button">increaseSize</button> -->
 
         <div id="col1" class="column" style="background-color: aqua;">
-          <button id="increaseSize" type="button" onclick="increaseSize()">increase size</button>
-          <button id="decreaseSize" type="button" onclick="decreaseSize()">decrease size</button>
+          <br></br>
+          <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>
+          <br></br>
+          <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
+          <br></br>
+          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+          <br></br>
+          <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
         </div>
 
         <div class="column" style="background-color: green;">
@@ -39,16 +39,23 @@
               <h1>Draw on me!</h1>
           </div>
 
-          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+          
 
 
         </div>
-
         <div id="col3" class="column" style="background-color: pink;">
-          <div style="text-align: center">
+          <div style="text-align: center"> 
             <input type="color" id="color" oninput="changeColor();">
+      
+            <br>
+
+          </br>
+
+          <div>
+            <input type="image" id="color" oninput="changeColor();" img src="C:/xampp/htdocs/final_project/images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
           </div>
         </div>
+       
 
       </div>
       <!-- end of drawing section -->
