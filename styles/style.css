@@ -152,7 +152,6 @@ input[type=text], input[type=password] {
     position: relative;
     top: 100px;
   }
-  
   button:hover {
     opacity: 0.8;
   }
