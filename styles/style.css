@@ -1,9 +1,35 @@
 .container{
-    width: 35%;  /* roughly center */ 
-    height: 100%;
     text-align: center;
     margin: auto;
+    position: relative;
 }
+
+.drawDiv{
+    height: 512px;
+    width: 512px;
+    text-align: center;
+    padding-left: 25%;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 body{
     background-color: #575656;
@@ -20,6 +46,26 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    /* padding: 10px; */
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 li {
     float: left;
@@ -61,7 +107,6 @@ li a:hover:not(.active) {
 
 
 button {
-    width: 40%; 
     font-size: 30px;
     border-radius: 12px;
     background-color: #dae2df;
@@ -69,3 +114,12 @@ button {
     margin: 5px;
 }
     
+
+#color{
+    background-image: radial-gradient(circle at center, red 40px, transparent 5px);  
+    background-repeat: no-repeat;
+    background-size: 20px 100%; /* equal to the height */
+    height: 200px;
+    width: 200px;
+    padding-left: 20px; /* equal to background-size in X-axis */
+}
