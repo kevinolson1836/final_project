@@ -56,7 +56,6 @@ function clearDrawing (){
 
 function changeColor(){
   let colorInput = document.querySelector('#color');
-  let hexInput = document.querySelector('#hex');
   let color = colorInput.value;
   console.log(color);
   stroke(color);

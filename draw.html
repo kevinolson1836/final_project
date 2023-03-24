@@ -15,6 +15,7 @@
      <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
+      <li><a href="animation.html">Upload</a></li>
     </ul>
     <!-- end nav bar -->
  
@@ -25,6 +26,8 @@
         <div id="col1" class="column" style="background-color: aqua;">
           <button id="increaseSize" type="button" onclick="increaseSize()">increase size</button>
           <button id="decreaseSize" type="button" onclick="decreaseSize()">decrease size</button>
+          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+          <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
         </div>
 
         <div class="column" style="background-color: green;">
@@ -32,18 +35,23 @@
               <h1>Draw on me!</h1>
           </div>
 
-          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+          
 
 
         </div>
+        <div id="col3" class="column" style="background-color: pink;";">
+          <div style="text-align: center"> 
+            <input type="color" id="color" oninput="changeColor();">
+      
+            <br>
 
-        <div id="col3" class="column" style="background-color: pink;" onclick="changeColor();">
-          <!-- <button type="button" onclick="changeColor();">color wheel</button> -->
-          <div style="text-align: center">
-            <input type="text" id="hex">
-            <input type="color" id="color">
+          </br>
+
+          <div>
+            <input type="image" id="color" oninput="changeColor();" img src="C:/xampp/htdocs/final_project/images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
           </div>
         </div>
+       
 
       </div>
       <!-- end of drawing section -->
