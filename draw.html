@@ -14,6 +14,41 @@
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
       <li><a href="animation.html">Upload</a></li>
+
+      <!-- login btn -->
+      <li style=" float: right;">
+        <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+      </li>
+      
+      <!-- start of login pop up -->
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      <!-- end of login pop up -->
+
     </ul>
     <!-- end nav bar -->
     
@@ -30,6 +65,8 @@
         <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
         <br></br>
         <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
+
+        <button id="save" type="button" onclick="clearDrawing()">save</button>
       </div>
       
       <div class="column" style="background-color: green;">
@@ -44,17 +81,13 @@
       
       <div id="col3" class="column" style="background-color: pink;">
         <div style="text-align: center"> 
-          <input type="color" id="color" oninput="changeColor();">
-          
           <br>
           
         </br>
         
-        <div>
-          <input type="image" id="color" oninput="changeColor();" img src="./images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
-        </div>
+       
         
-          <div id="testttt">
+          <div id="testttt" style="margin-top: 50%;">
             <p id="para"></p>
           </div>
           
