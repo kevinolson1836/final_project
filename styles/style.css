@@ -2,6 +2,7 @@
     text-align: center;
     margin: auto;
     position: relative;
+    padding: 16px;
 }
 
 .drawDiv{
@@ -20,7 +21,6 @@
   .column {
     float: left;
     width: 33.33%;
-    height: 300px; /* Should be removed. Only for demonstration */
   }
   
   /* Clear floats after the columns */
@@ -53,24 +53,17 @@ ul {
     background-color: #424141;
 }
 
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Create three equal columns that floats next to each other */
-  .column {
+.column {
     float: left;
     width: 33.33%;
-    /* padding: 10px; */
-    height: 800px; /* Should be removed. Only for demonstration */
-  }
+    height: 100%;
+}
   
-  /* Clear floats after the columns */
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 
 li {
@@ -149,8 +142,6 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     width: 100%;
-    position: relative;
-    top: 100px;
   }
   button:hover {
     opacity: 0.8;
@@ -175,10 +166,7 @@ input[type=text], input[type=password] {
     border-radius: 50%;
   }
   
-  .container {
-    padding: 16px;
-  }
-  
+
   span.psw {
     float: right;
     padding-top: 16px;
@@ -202,7 +190,7 @@ input[type=text], input[type=password] {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
@@ -250,3 +238,6 @@ input[type=text], input[type=password] {
     }
   }
       
+.testttt{
+    background-color: red;
+}
