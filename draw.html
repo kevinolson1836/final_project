@@ -3,64 +3,73 @@
     <!-- p5.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     
-    <!-- the JS code in here -->
-    <script src="./js/sketch.js"></script>
     
     <!-- css here -->
     <link rel="stylesheet" href="./styles/style.css">
   </head>
-
-  <body onload="addEventListen()">
-     <!-- start nav bar -->
-     <ul class="">
+  
+  <body>
+    <!-- start nav bar -->
+    <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
       <li><a href="animation.html">Upload</a></li>
     </ul>
     <!-- end nav bar -->
- 
+    
     <!-- start of drawing section -->
     <div class="container row">
       <!-- <button id="increaseSize" type="button">increaseSize</button> -->
 
-        <div id="col1" class="column" style="background-color: aqua;">
-          <br></br>
-          <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>
-          <br></br>
-          <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
-          <br></br>
-          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
-          <br></br>
-          <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
-        </div>
-
-        <div class="column" style="background-color: green;">
-          <div id="drawDiv">
-              <h1>Draw on me!</h1>
-          </div>
-
-          
-
-
-        </div>
-        <div id="col3" class="column" style="background-color: pink;">
-          <div style="text-align: center"> 
-            <input type="color" id="color" oninput="changeColor();">
+      <div id="col1" class="column" style="background-color: aqua;">
+        <br></br>
+        <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>
+        <br></br>
+        <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
+        <br></br>
+        <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+        <br></br>
+        <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
+      </div>
       
-            <br>
-
-          </br>
-
-          <div>
-            <input type="image" id="color" oninput="changeColor();" img src="C:/xampp/htdocs/final_project/images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
-          </div>
+      <div class="column" style="background-color: green;">
+        <div id="drawDiv">
+          <h1>Draw on me!</h1>
         </div>
-       
-
+        
+        
+        
+        
+      </div>
+      
+      <div id="col3" class="column" style="background-color: pink;">
+        <div style="text-align: center"> 
+          <input type="color" id="color" oninput="changeColor();">
+          
+          <br>
+          
+        </br>
+        
+        <div>
+          <input type="image" id="color" oninput="changeColor();" img src="./images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
+        </div>
+        
+          <div id="testttt">
+            <p id="para"></p>
+          </div>
+          
+        </div>
+        
       </div>
       <!-- end of drawing section -->
-  
-
-
-  </body>
-</html>
+      
+      
+      
+    </body>
+    
+    <!-- the JS code in here -->
+    <script src="./js/sketch.js"></script>
+    <script src="./js/colorWheel.js"></script>
+    
+    
+    </html>
