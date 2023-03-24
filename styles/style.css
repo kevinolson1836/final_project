@@ -32,7 +32,7 @@
 
 
 body{
-    background-color: #575656;
+    background-color: #6b6a6a;
 }
 
 h1{
@@ -50,7 +50,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1f1e1e;
+    background-color: #424141;
 }
 
 * {
@@ -62,7 +62,7 @@ ul {
     float: left;
     width: 33.33%;
     /* padding: 10px; */
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 800px; /* Should be removed. Only for demonstration */
   }
   
   /* Clear floats after the columns */
