@@ -11,14 +11,44 @@
         <ul class="">
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="draw.html">Draw</a></li>
-            <li><a href="animation.html">Upload</a></li>
+            <li><a href="Upload.html">Upload</a></li>
+
+             <!-- login btn -->
+      <li style=" float: right;">
+        <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+      </li>
+
+      <!-- start of login pop up -->
+       
+      <!-- end of login pop up -->
+
         </ul>
         <!-- end nav bar -->
 
         <h1> index</h1>
-        <p>
-            Login Screen
-        </p>
-
+        <div id="id01" class="modal" style="display: block;">
+            <!-- <form class="modal-content " action="/action_page.php" method="post"> -->
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="./images/logon.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button type="submit">Login</button>
+                
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Log off</button>
+              </div>
+            <!-- </form> -->
+          </div>
     </body>
 </html>
