@@ -13,19 +13,19 @@
     <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
-      <li><a href="Upload.html">Upload</a></li>
+      <li><a href="animation.html">Upload</a></li>
 
       <!-- login btn -->
       <li style=" float: right;">
         <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
       </li>
-
+      
       <!-- start of login pop up -->
         <div id="id01" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="./images/logon.png" alt="Avatar" class="avatar">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
@@ -36,12 +36,14 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
               
             <button type="submit">Login</button>
-            
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
           </div>
       
           <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Log off</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
       </div>
@@ -85,7 +87,7 @@
         
        
         
-          <div id="testttt" style="align-items: center;">
+          <div id="testttt" style="margin-top: 10%;">
             <p id="para"></p>
           </div>
           
