@@ -68,7 +68,7 @@ ul {
 
 li {
     float: left;
-    border-right:1px solid #bbb;
+    /* border-right:1px solid #bbb; */
 }
 
 li:last-child {
@@ -114,7 +114,8 @@ button {
     background-color: #dae2df;
     padding: 10px;
     margin: 5px;
-}
+    /* width: 10%; */
+  }
 #color{
     border: none; 
     border-width: 0; 
@@ -130,11 +131,12 @@ input[type=text], input[type=password] {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
+    border-radius: 12px;
     box-sizing: border-box;
   }
   
   /* Set a style for all buttons */
-  button {
+  .button-login {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -246,4 +248,9 @@ input[type=text], input[type=password] {
   color: white;
   text-align: center;
   opacity: 1; /* Firefox */
+}
+
+
+#clear{
+  background-color: #ce0101;
 }

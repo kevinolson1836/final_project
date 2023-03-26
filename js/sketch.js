@@ -183,7 +183,7 @@ function colorWheelMouse(evt) {
   var rawR = data.data[0];
   var rawG = data.data[1];
   var rawB = data.data[2];
-  p.innerHTML = "RGB: " + data.data.slice(0, 3).join(',');
+  // p.innerHTML = "RGB: " + data.data.slice(0, 3).join(',');
   console.log("RGB(" + rawR + ",", rawG+ ",", rawB + ")");
   stroke(rawR, rawG, rawB);
 }
