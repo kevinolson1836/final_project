@@ -39,6 +39,7 @@ function changeColor(element){
 
 function increaseSize(){
   strokeSize +=1;
+  document.getElementById("fontsize").innerHTML = "Font Size: " + strokeSize;
 }
 
 function decreaseSize(){
@@ -46,6 +47,8 @@ function decreaseSize(){
   if(strokeSize <= 0){
      strokeSize = 1;      
      }
+  document.getElementById("fontsize").innerHTML = "Font Size: " + strokeSize;
+
 }
 
 
@@ -65,7 +68,9 @@ function changeColor(){
 
 
 
-
+function saveDrwaing(){
+  saveCanvas('mycanvas', 'png')
+}
 
 
 
@@ -186,6 +191,10 @@ function colorWheelMouse(evt) {
   // p.innerHTML = "RGB: " + data.data.slice(0, 3).join(',');
   console.log("RGB(" + rawR + ",", rawG+ ",", rawB + ")");
   stroke(rawR, rawG, rawB);
+  document.getElementById("whatcolor").innerHTML = "RGB Value: " + rawR + ", " + rawG + ", " + rawB;
+  document.getElementById("whatcolor").style.color = "rgb(" + rawR + ",", rawG+ ",", rawB + ")";
+  console.log();
+
 }
 //Bind mouse event
 colorWheel.onclick = colorWheelMouse;
