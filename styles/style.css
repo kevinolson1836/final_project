@@ -259,3 +259,10 @@ input[type=text], input[type=password] {
   padding: 90px;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .column1, .column, .column2 {
+    width: 110%;
+  }
+}
