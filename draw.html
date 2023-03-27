@@ -3,61 +3,106 @@
     <!-- p5.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     
-    <!-- the JS code in here -->
-    <script src="./js/sketch.js"></script>
     
     <!-- css here -->
     <link rel="stylesheet" href="./styles/style.css">
   </head>
-
-  <body >
-     <!-- start nav bar -->
-     <ul class="">
+  
+  <body>
+    <!-- start nav bar -->
+    <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
       <li><a href="animation.html">Upload</a></li>
+
+      <!-- login btn -->
+      <li style=" float: right;">
+        <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+      </li>
+      
+      <!-- start of login pop up -->
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      <!-- end of login pop up -->
+
     </ul>
     <!-- end nav bar -->
- 
+    
     <!-- start of drawing section -->
     <div class="container row">
       <!-- <button id="increaseSize" type="button">increaseSize</button> -->
 
-        <div id="col1" class="column" style="background-color: aqua;">
-          
-          <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>          
-          <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
-          <button id="clear" type="button" onclick="clearDrawing()">Clear</button>         
-          <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
-        </div>
-
-        <div class="column" style="background-color: green;">
-          <div id="drawDiv">
-              <h1>Draw on me!</h1>
-          </div>
-
-          
-
-
-        </div>
-        <div id="col3" class="column" style="background-color: pink;";">
-          <div style="text-align: center"> 
-            <input type="color" id="color" oninput="changeColor();">
+      <div id="col1" class="column">
+        <h1>stroke effectrs</h1>
+        <div style="height: 5%;"></div>
+        <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>
+        <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
+        <br><br><br><br>
+        <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
+        <button id="save" type="button" onclick="clearDrawing()">Save</button>
+        <br><br><br><br>
+        <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+      </div>
       
-            <br>
-
-          </br>
-
-          <div>
-            <input type="image" id="color" oninput="changeColor();" img src="C:/xampp/htdocs/final_project/images/colorwheel.jpg" alt="colorwheel" width="170" height="170" >
-          </div>
+      <div class="column" style="">
+        <div id="drawDiv">
+          <h1>Draw on me!</h1>
         </div>
+        
+        
+        
+        
+      </div>
+      
+      <div id="col3" class="column">
+        <div style="text-align: center"> 
+      </div>
+        
        
+        
+          <div id="testttt" >
+            <h1>Pick-a-color</h1>
+        <div style="height: 10%;"></div>
 
+            <p id="para"></p>
+          </div>
+          
+        </div>
+        
       </div>
       <!-- end of drawing section -->
-  
-
-
-  </body>
-</html>
+      
+      
+      
+    </body>
+    
+    <!-- the JS code in here -->
+    <script src="./js/sketch.js"></script>
+    <script src="./js/colorWheel.js"></script>
+    
+    
+    </html>

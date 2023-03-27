@@ -12,13 +12,70 @@
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="draw.html">Draw</a></li>
             <li><a href="animation.html">Upload</a></li>
+
+         <!-- login btn -->
+      <li style=" float: right;">
+        <a class="active button-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto; background-color: #04AA6D;">Login</a>
+      </li>
+      
+      <!-- start of login pop up -->
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button class="button-login" type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      <!-- end of login pop up -->   
+
         </ul>
         <!-- end nav bar -->
 
-        <h1> index</h1>
-        <p>
-            Login Screen
-        </p>
+        <div style="height: 1%;"></div>
 
+        <div id="id01" class="modal" style="display: block; position: unset;">
+            <!-- <form class="modal-content " action="/action_page.php" method="post"> -->
+              <div class="imgcontainer">
+                <img src="./images/logon.png" alt="Avatar" class="avatar" height="200px" width="200px" >
+              </div>
+          
+              <div class="container" style="width: 80%; color: white;">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br><br><br>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <br><br>
+                  
+                <button class="button-login" type="submit">Login</button>
+                
+              </div>
+          
+              <!-- <div class="container" style=" width: 80%;">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Log off</button>
+              </div> -->
+            <!-- </form> -->
+          </div>
     </body>
 </html>
