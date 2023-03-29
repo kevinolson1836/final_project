@@ -55,12 +55,37 @@
 
     </ul>
   <!-- end nav bar -->
-</body>
+  </body>
 
-    <h1 style="text-align: center;">Upload Images</h1>
+<!-- UNEEDED-->
+<!--file saver attempt-->
+  <div class="fileSaver"> 
+    <input type ="text" id="text" placeholder="Image"/>
+    <input type ="text" id="name" placeholder="File"/>
+    <!--Download Button-->
+    <button type="submit" onclick="Generate()">Download</button>
+  </div>
+  
+   <script src="./js/FileSaver.js"></script>
+   <script>
+   function Generate(){
+    var name = document.getElementById("name").value;
+    var text = document.getElementById("text").value;
+
+    var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, name);
+   }
+  </script>
+<!--end of file saver attempt-->
+
+<!-- Upload Xtra)
+    <div class="uploadimg" style="text-align: center;" >Upload Images</h1>
     <body>
-      <label for="myfile">Select a file:</label>
+      <br>
+      <br>
+      <br>
+      <label for="myfile" style="text-align: center;">Select a file:</label>
       <input type="file" id="myfile" name="myfile">
     </body>
-  
+  -->
 </html>

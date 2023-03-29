@@ -126,11 +126,11 @@ button {
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 12px;
     box-sizing: border-box;
   }
@@ -253,4 +253,16 @@ input[type=text], input[type=password] {
 
 #clear{
   background-color: #ce0101;
+}
+
+.fileSaver{
+  padding: 90px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .column1, .column, .column2 {
+    width: 110%;
+  }
 }
