@@ -1,0 +1,93 @@
+
+<!-- i was inspired by codingtrain on youtube so i built something similar to what he did
+    
+-->
+
+<html>
+  <head> 
+     <!-- p5.js CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    
+     <!-- the JS code in here -->
+     <script src="./js/sketch.js"></script>
+     
+     <!-- css here -->
+     <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+     <!-- start nav bar -->
+     <ul class="">
+      <li><a  href="index.html">Home</a></li>
+      <li><a href="draw.html">Draw</a></li>
+      <li><a href="Upload.html">Upload</a></li>
+      <li><a class="active" href="veiw.html">Veiw</a></li>
+
+ <!-- login btn -->
+ <li style=" float: right;">
+  <a class="active " onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+</li>
+
+<!-- start of login pop up -->
+  <div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="./images/logon.png" alt="Avatar" class="avatar" height="150px" width="150px">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Log off</button>
+    </div>
+  </form>
+</div>
+<!-- end of login pop up -->
+
+    </ul>
+  <!-- end nav bar -->
+
+    <!-- start of drawing section -->
+    <div class="photo-container">
+
+        <div class="container row ">
+            <div id="col1" class="column-5">
+                col1
+            </div>
+            
+            <div id="col2" class="column-5">
+                col2
+            </div>
+            
+            <div id="col3" class="column-5">
+                col3
+            </div>
+            
+            <div id="col4" class="column-5" style="background-color: red;">
+                col4
+            </div>
+
+            <div id="col5" class="column-5">
+                col5
+            </div>
+
+
+        </div>
+    </div>
+          
+      
+
+
+  </body>
+
+</html>
