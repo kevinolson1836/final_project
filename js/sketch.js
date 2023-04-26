@@ -16,6 +16,8 @@ function setup() {
   myCanvas.parent(parentDiv);
   background(200);
 
+  console.log(myCanvas);
+
 }
 
 function draw() {
@@ -69,7 +71,7 @@ function changeColor(){
 
 
 function saveDrwaing(){
-  saveCanvas('mycanvas', 'png')
+  saveCanvas('mycanvas', 'png');
 }
 
 

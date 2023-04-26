@@ -7,46 +7,119 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     
     
-    <!-- css here -->
-    <link rel="stylesheet" href="./styles/style.css">
+        <!-- css in here -->
+        <link rel="stylesheet" href="styles/style.css">
   </head>
   
   <body>
+    <?php
+    include("config.php");
+    include("login.php");
+
+
+
+
+    $img_path = "nulls";
+            function check_img(){
+                $target_dir = "img/";
+                $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                $uploadOk = 1;
+                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                
+                $img_path = basename($_FILES["fileToUpload"]["name"]);
+
+                // Check if image file is a actual image or fake image
+                if(isset($_POST["submit"])) {
+                    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                    if($check !== false) {
+                        $uploadOk = 1;
+                    } else {
+                        $uploadOk = 0;
+                    }
+                }
+                    
+                // // Check if file already exists
+                // if (file_exists($target_file)) {
+                //     echo "<h1 style='text-align: center; font-size: 100px;'>Sorry, file already exists. Please try again with a new name</h1>";
+                //     $uploadOk = 0;
+                // }
+                
+                // Check file size
+                if ($_FILES["fileToUpload"]["size"] > 500000)  {
+                    echo "<h1 style='text-align: center; font-size: 100px;'>Sorry, file is to big. Please again with samller file.</h1>";
+                    $uploadOk = 0;
+                }
+                
+                // Allow certain file formats
+                if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                && $imageFileType != "gif" && $imageFileType != "") {
+                    echo "<h1 style='text-align: center; font-size: 100px;'>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</h1>";
+                    $uploadOk = 0;
+                }
+                
+                // Check if $uploadOk is set to 0 by an error
+                if ($uploadOk == 0 ) {
+                    echo "<h1 style='text-align: center; font-size: 100px;'>Sorry, your file was not uploaded.</h1>";
+                    return(-1);
+
+                    // if everything is ok, try to upload file
+                } else {
+                    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                        $img_path =  htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
+                    } else {
+                        if (isset($_POST["submit"])){
+                            echo "<h1 style='text-align: center; font-size: 100px;'>Sorry, there was an error uploading your file.</h1>";
+                        }
+                    }
+                }
+                return($img_path);
+            }
+
+            $img_path = check_img();
+            echo $img_path;
+
+    ?>
     <!-- start nav bar -->
     <ul class="">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="draw.html">Draw</a></li>
-      <li><a href="upload.html">Upload</a></li>
+      <li><a href="view.html">View</a></li>
 
       <!-- login btn -->
       <li style=" float: right;">
         <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
       </li>
-      
-      <!-- start of login pop up -->
-        <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="./images/logon.png" alt="Avatar" class="avatar" height="150px" width="150px">
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+          <!-- end nav bar -->
+
+
+
+            <!-- start of login pop up -->
+            <div id="id01" class="modal">
+              <form class="modal-content animate" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="./images/logon.png" alt="Avatar" class="avatar" height="150px" width="150px">
+                </div>
+            
+                <div class="container">
+                  <form method="post">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
               
-            <button type="submit">Login</button>
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          </div>
-        </form>
-      </div>
-      <!-- end of login pop up -->
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                      
+                    <button class="button-login" type="submit">Login</button>
+                  </div>
+                  
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button name="logout" class="cancelbtn" type="submit" onclick="location.href = 'logout.php';">Log out</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  </div>
+                </form> 
+              </form>
+            </div>
+            <!-- end of login pop up -->   
 
     </ul>
     <!-- end nav bar -->
