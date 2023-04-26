@@ -1,7 +1,7 @@
 logon 
 log off
 save img
-remove image 
+clear image 
 view all images on site
 
 
