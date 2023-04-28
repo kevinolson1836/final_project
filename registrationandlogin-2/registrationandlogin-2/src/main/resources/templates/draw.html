@@ -1,0 +1,116 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+<!--Screen Fitting-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- p5.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    
+    
+        <!-- css in here -->
+        <link rel="stylesheet" href="styles/style.css">
+  </head>
+  
+  <body>
+    
+    <!-- start nav bar -->
+    <ul class="">
+      <li><a  th:href="@{/index}">Home</a></li>
+          <li><a class="active" th:href="@{/draw}">Draw</a></li>
+            <li><a th:href="@{/view}">View</a></li>
+
+      <!-- login btn -->
+      <li style=" float: right;">
+        <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+      </li>
+          <!-- end nav bar -->
+
+
+
+            <!-- start of login pop up -->
+            <div id="id01" class="modal">
+              <form class="modal-content animate" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="./images/logon.png" alt="Avatar" class="avatar" height="150px" width="150px">
+                </div>
+            
+                <div class="container">
+                  <form method="post">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+              
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                      
+                    <button class="button-login" type="submit">Login</button>
+                  </div>
+                  
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button name="logout" class="cancelbtn" type="submit" onclick="location.href = 'logout.php';">Log out</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  </div>
+                </form> 
+              </form>
+            </div>
+            <!-- end of login pop up -->   
+
+    </ul>
+    <!-- end nav bar -->
+    
+    <!-- start of drawing section -->
+    <div class="container row">
+      <!-- <button id="increaseSize" type="button">increaseSize</button> -->
+
+      <div id="col1" class="column">
+        <h1>stroke effectrs</h1>
+        <h3 id="fontsize">Font size: 10</h3>
+
+        <div style="height: 5%;"></div>
+        <button id="increaseSize" type="button" onclick="increaseSize()">Increase Size</button>
+        <button id="decreaseSize" type="button" onclick="decreaseSize()">Decrease Size</button>
+        <br><br><br><br>
+        <button id="Upload" type="button" onclick="clearDrawing()">Upload</button>
+        <button id="save" type="button" onclick="saveDrwaing()">Save</button>
+        <br><br><br><br>
+        <button id="clear" type="button" onclick="clearDrawing()">Clear</button>
+      </div>
+      
+      <div class="column">
+        <div id="drawDiv">
+          <h1>Draw on me!</h1>
+        </div>
+        
+        
+        
+        
+      </div>
+      
+      <div id="col3" class="column">
+        <div style="text-align: center"> 
+      </div>
+        
+       
+        
+          <div id="testttt" >
+            <h1>Pick-A-Color</h1>
+        <div style="height: 10%;"></div>
+
+      </div>
+      <h3 id="whatcolor"></h3>
+          
+        </div>
+        
+      </div>
+      <!-- end of drawing section -->
+      
+      
+      
+    </body>
+    
+    <!-- the JS code in here -->
+    <script src="./js/sketch.js"></script>
+    <script src="./js/colorWheel.js"></script>
+    
+    
+    </html>

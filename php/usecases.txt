@@ -1,0 +1,10 @@
+finished: 
+    logon 
+    log off
+    save img
+    clear image 
+
+TODO: 
+    view all images on site
+    Upload
+
