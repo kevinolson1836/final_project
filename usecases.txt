@@ -1,15 +1,10 @@
-logon 
-log off
-save img
-clear image 
-view all images on site
+finished: 
+    logon 
+    log off
+    save img
+    clear image 
 
-
-log in page???
-    with log off 
-
-main drawing page
-
-uploaded imgaes page
-    can also view other images zsw
+TODO: 
+    view all images on site
+    Upload
 
